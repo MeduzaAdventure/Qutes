@@ -1,5 +1,4 @@
-* 
-{
+* {
   margin: 0;
   padding: 0;
 }
@@ -15,9 +14,12 @@ p{
     background-repeat: no-repeat;
 }
 .header-flex{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    padding: 55px 346px 0;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding: 55px 0 0;
 }
 .title {
     padding: 82px 129px 506px 0;
@@ -41,7 +43,7 @@ p{
 }
 .logo{
     background: url(../img/logo.png);
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     width: 200px;
     height: 80px;
@@ -67,7 +69,7 @@ p{
     list-style-type: none;
     position: absolute;
     top: 122px;
-    left: 450px;
+    left: 30%;
 }
 .navigation li{
     margin-bottom: 15px;
@@ -78,6 +80,7 @@ p{
     font-weight: 700;
     text-transform: uppercase;
     color: #626262;
+    -webkit-transition: 0.3s;
     transition: 0.3s;
     letter-spacing: 10px;
 }
@@ -93,7 +96,7 @@ p{
     font-size: 50px;
     position: absolute;
     top: 40px;
-    right: 350px;
+    right: 20%;
 }
 .btn-close span{
     display: block;
@@ -121,7 +124,8 @@ h1 span{
 .text2, .text3{
     font-size: 20px;
     font-weight: 500;
-    width: 1007px;
+    width: 100%;
+    max-width: 1007px;
     line-height: 30px;
 }
 .text2{
@@ -139,9 +143,15 @@ h1 span{
     background-color: #ffddd5;
 }
 .slider-flex{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .text-padding {
     padding: 0 15px;
@@ -162,19 +172,27 @@ h1 span{
     font-size: 36px;
 }
 .slider-text{
-    flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
     padding: 130px 0 141px;
 }
 .slider-img{
-    flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
 }
 .slider-img img {
-    width: 800px;
+    max-width: 100%;
+    height: auto;
 }
 .flex-panel{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     width: 100%;
     max-width: 1400px;
     margin: 0 auto;
@@ -183,7 +201,8 @@ h1 span{
     margin: 120px 0 129px;
 }
 .item-panel{
-    flex-basis: 49%;
+    -ms-flex-preferred-size: 49%;
+        flex-basis: 49%;
     border: 1px solid #dcdcdc;
     padding: 46px 0 0 0;
 }
@@ -218,6 +237,7 @@ h1 span{
     display: block;
     text-align:  center;
     letter-spacing: 2px;
+    -webkit-transition: 0.3s;
     transition: 0.3s;
 }
 
@@ -229,7 +249,8 @@ h1 span{
 .title-ci{
     color: #fff;
     text-align: center;
-    width: 831px;
+    width: 100%;
+    max-width: 831px;
     margin: 0 auto;
     padding: 192px 0 65px 0;
 }
@@ -255,33 +276,23 @@ h1 span{
     width: 100%;
     max-width: 1400px;
     margin: 0 auto;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 .grid-a{
-    background-image: url(../img/poster1.png);
-    width: 560px;
-    height: 760px;
     grid-area: a;
     margin-right: 100px;
 }
 .grid-b{
-    background-image: url(../img/poster2.png);
-    width: 740px;
-    height: 370px;
     grid-area: b;
     margin-bottom: 50px;
 }
 .grid-c{
-    background-image: url(../img/poster3.png);
-    width: 330px;
-    height: 340px;
     margin-right: 80px;
     grid-area: c;
 }
 .grid-d{
-    background-image: url(../img/poster4.png);
-    width: 330px;
-    height: 340px;
     grid-area: d;
 }
 .grid-item{
@@ -298,12 +309,35 @@ h1 span{
 .title-posters{
     padding: 90px 0 127px 0;
 }
-
+.poster2{
+    width: auto;
+    max-width: 740px;
+    height: auto;
+    max-height: 370px;
+}
+.poster1{
+    width: auto;
+    max-width: 560px;
+    height: auto;
+    max-height: 762px;
+}
+.poster3, .poster4{
+    width: auto;
+    max-width: 330px;
+    height: auto;
+    max-height: 340px;
+}
 .grid-panel ul{
     list-style-type: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 0 38px 10px 10px;
 }
 .btn-buy{
@@ -338,6 +372,7 @@ h1 span{
     display: block;
     text-align:  center;
     letter-spacing: 2px;
+    -webkit-transition: 0.3s;
     transition: 0.3s;
 }
 .btn-more:hover, .btn-browse:hover, .btn-submit:hover{
@@ -345,8 +380,12 @@ h1 span{
     color: #fff;
 }
 .flex-info{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 .info-item h3{
     font-family: 'Montserrat', sans-serif;
@@ -393,30 +432,41 @@ h1 span{
     border: 2px solid black;
     background: none;
     border-radius: 3px;
+    -webkit-transition: 0.3s;
     transition: 0.3s;
 }
 .page-info {
     padding: 121px 15px 75px;
 }
 .flex-footer{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .info-item .space{
     margin-bottom: 49px;
 }
 .info-a{
-    flex-basis: 10%;
+    -ms-flex-preferred-size: 10%;
+        flex-basis: 10%;
 }
 .info-b{
-    flex-basis: 16%;
+    -ms-flex-preferred-size: 16%;
+        flex-basis: 16%;
 }
 .info-c{
-    flex-basis: 20%;
+    -ms-flex-preferred-size: 20%;
+        flex-basis: 20%;
 }
 .info-d{
-    flex-basis: 24.5%;
+    -ms-flex-preferred-size: 24.5%;
+        flex-basis: 24.5%;
 }
 .info-d h3 {
     margin-bottom: 25px;
@@ -433,6 +483,8 @@ h1 span{
 }
 .icon-list ul{
     list-style-type: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 .icons{
@@ -527,5 +579,306 @@ h1 span{
 @media (max-width: 1430px){
     .grid-a {
         margin-right: 15px;
+    }
+}
+@media (max-width: 1320px){
+    .poster2{
+        max-width: 670px;
+    }
+    .poster1{
+        max-width: 500px;
+    }
+    .poster3, .poster4{
+        max-width: 280px;
+    }
+    .grid-b{
+        margin-right: 104px;
+    }
+    .grid-d{
+        margin-right: 73px;
+    }
+    .panel-c>ul, .panel-d>ul{
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+    }
+    .panel-c>ul>li, .panel-d>ul>li{
+        margin-bottom: 15px;
+    }
+}
+@media (max-width: 1200px){
+    .grid{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "b b" "a c" "a d";
+        width: 70%;
+        justify-items: stretch;
+    }
+    .poster1{
+        max-width: 380px;
+        text-align: right;
+    }
+    .grid-b{
+        margin: 0 140px 0 0;
+    }
+    .grid-c, .grid-d{
+        margin: 0 125px 0 0;
+    }
+    .poster3, .poster4{
+        max-width: 250px;
+    }
+}
+@media (max-width: 1130px){
+    .slider-img{
+        display: none;
+    }
+}
+@media (max-width: 1100px){
+    .grid-b{
+        margin: 0 90px 0 0;
+    }
+    .grid-c, .grid-d{
+        margin: 0 70px 0 0;
+    }
+}
+@media (max-width: 1000px){
+    .title{
+        padding: 82px 0 350px 0;
+    }
+    .header-title, .header-text{
+        text-align: center;
+    }
+    .navigation>ul{
+        left: 30px;
+    }
+    .btn-close{
+        right: 30px;
+    }
+    .grid-b{
+        margin: 0;
+    }
+    .grid-c, .grid-d{
+        margin: 0;
+    }
+}
+@media (max-width: 900px){
+    .grid{
+        width: 76%;
+    }
+}
+@media (max-width: 800px){
+    .grid{
+        width: 86%;
+    }
+}
+@media (max-width: 750px){
+    .grid{
+        grid-template-columns: 1fr;
+        grid-template-areas: "b" "a" "c" "d";
+        justify-items: center;
+        width: 100%;
+    }
+    .grid-a{
+        margin: 0;
+    }
+    .poster3, .poster4, .poster1, .poster2 {
+        max-width: 330px;
+    }
+    .panel-c>ul, .panel-d>ul {
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+    }
+    .header-title{
+        font-size: 190px;
+    }
+    .header-text{
+        font-size: 52px;
+    }
+    .logo{
+        width: 150px;
+    }
+}
+@media (max-width: 700px){
+    .header-title {
+        font-size: 130px;
+        line-height: 110px;
+    }
+    .header-text {
+        font-size: 35px;
+    }
+    h1{
+        font-size: 42px;
+    }
+    .text1, .text2, .text3, .item-mess, .item-author, .btn-more, .info-item h3, .btn-browse{
+        font-size: 18px;
+    }
+    .slider-title, .slider-author{
+        font-size: 32px;
+    }
+    .nav-item{
+        font-size: 38px;
+    }
+    .item-panel h2{
+        font-size: 25px;
+    }
+    .info-item li, .info-item p, .btn-submit, .footer-text{
+        font-size: 14px;
+    }
+    .info-item input{
+        font-size: 13px;
+    }
+    .flex-info{
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    }
+    .info-item{
+        -ms-flex-preferred-size: 50%;
+            flex-basis: 50%;
+        margin-bottom: 30px;
+    }
+    .flex-footer{
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    }
+    .footer-text{
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .icon-list{
+        margin: 0 auto;
+        padding: 0;
+    }
+    .icon-list .icon-fb{
+        margin: 0;
+    }
+    .btn-close span {
+        display: none;
+    }
+    .text-ci{
+        font-size: 16px;
+    }
+    .slider-text, .title-posters {
+        padding: 50px 0;
+    }
+    .title-happy {
+        margin: 50px 0;
+    }
+    .btn-more,  .btn-browse{
+        margin: 50px auto;
+    }
+    .page-posters{
+        padding: 0 0 50px 0;
+    }
+    .info-item h3{
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 600px){
+    .item-panel{
+        -ms-flex-preferred-size: 70%;
+            flex-basis: 70%;
+    }
+    .slider-title, .slider-author{
+        width: 447px;
+        margin: 0 auto 30px;
+    }
+}
+@media (max-width: 500px){
+    .header-title {
+        font-size: 100px;
+        line-height: 75px;
+    }
+    .header-text {
+        font-size: 25px;
+    }
+    h1{
+        font-size: 36px;
+    }
+    .text1, .text2, .text3, .item-mess, .item-author, .btn-more, .info-item h3, .btn-browse{
+        font-size: 14px;
+    }
+    .slider-title, .slider-author{
+        font-size: 23px;
+        width: 315px;
+    }
+    .nav-item{
+        font-size: 24px;
+    }
+    .btn-close{
+        font-size: 35px;
+    }
+    .item-panel h2{
+        font-size: 20px;
+    }
+    .info-item li, .info-item p, .btn-submit, .footer-text{
+        font-size: 12px;
+    }
+    .info-item input{
+        font-size: 11px;
+    }
+    .info-item{
+        -ms-flex-preferred-size: 60%;
+            flex-basis: 60%;
+        margin: 0 auto 30px;
+    }
+    .text-padding{
+        width: 320px;
+    }
+    .icons{
+        margin-left: 14px;
+    }
+}
+@media (max-width: 400px){
+    .header-title {
+        font-size: 75px;
+        line-height: 75px;
+    }
+    .header-text {
+        font-size: 18px;
+    }
+    h1{
+        font-size: 28px;
+    }
+    .text1, .text2, .text3, .item-mess, .item-author, .btn-more, .info-item h3, .btn-browse{
+        font-size: 12px;
+    }
+    .slider-title, .slider-author{
+        font-size: 20px;
+    }
+    .nav-item{
+        font-size: 20px;
+    }
+    .btn-close{
+        font-size: 35px;
+    }
+    .item-panel{
+        padding: 15px 0 0 0;
+    }
+    .item-panel h2{
+        font-size: 18px;
+        margin-left: 15px;
+    }
+    .item-mess{
+        margin: 0 15px;
+    }
+    .item-author{
+        margin: 15px 15px;
+    }
+    .info-item li, .info-item p, .btn-submit, .footer-text{
+        font-size: 12px;
+    }
+    .info-item input{
+        font-size: 11px;
+    }
+    .text-ci {
+        font-size: 14px;
+    }
+    .poster3, .poster4, .poster1, .poster2 {
+        max-width: 300px;
+    }
+    .text-padding{
+        padding: 0;
     }
 }
